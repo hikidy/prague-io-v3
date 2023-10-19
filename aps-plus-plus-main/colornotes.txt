@@ -1,0 +1,61 @@
+Color: 0, the color of gem.
+
+Color: 1, the color of green polygons.
+
+Color: 2, the color of triangle.
+
+Color: 3, the color of Arena Closer.
+
+Color: 4, a color that is similar to Paladin (Purple celestial).
+
+Color: 5, the color of crasher.
+
+Color: 6, the color of egg.
+
+Color: 7, a greyish-brown color.
+
+Color: 8, a white color that is more brighter than the egg.
+
+Color: 9, the color of smasher's body.
+
+Color: 10, the color of blue team.
+
+Color: 11, the color of green team.
+
+Color: 12, the color of red team.
+
+Color: 13, the color of square.
+
+Color: 14, the color of pentagon.
+
+Color: 15, the color of purple team.
+
+Color: 16, the color of turret.
+
+Color: 17, the color of Rogue Palisade.
+
+Color: 18, a color that is slightly darker than the egg.
+
+Color: 19, a black color that is darker than Rogue Palisade.
+
+Color: 20, the color of flashing polygons (cyan, red).
+
+Color: 21 - 22, (cyan, grey).
+
+Color: 23 - 24, (red, grey).
+
+Color: 25 - 29, 37 - 50 and beyond, a magenta color.
+
+Color: 30, a purple color more saturated than Paladin.
+
+Color: 31, a blue color.
+
+Color: 32, a red color that is more saturated than red team.
+
+Color: 33, a orange color.
+
+Color: 34, a green color that is more satrated than Freyja (Green celestial).
+
+Color: 35, the color of Theia (Yellow celestial).
+
+Color: 36, THE COLOR OF THE RAINBOW POLYGON!!!

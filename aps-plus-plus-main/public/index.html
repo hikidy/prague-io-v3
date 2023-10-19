@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="description" content="Prague.io is a fan-made sequel of diep.io. Survive and shoot at others while keeping your own tank alive! Play the game at https://arras.io/.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:image" content="//arras.io/favicon/96x96.png">
+    <meta property="og:image:width" content="54">
+    <meta property="og:image:height" content="54">
+    <title>Prague.io</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700">
+    <link rel="stylesheet" href="/main.css" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/lib/json/manifest.json">
+    <meta name="msapplication-TileColor" content="#8abc3f">
+    <meta name="theme-color" content="#8abc3f">
+</head>
+<body oncontextmenu="return false" id="mainBody">
+    <div id="gameAreaWrapper">
+        <canvas id="gameCanvas" tabindex="1"></canvas>
+        <input id="chatInput" type="text" maxlength="256" hidden=true>
+    </div>
+    <div id="mainWrapper">
+        <div id="startMenuWrapper">
+            <div id="startMenu">
+                <div class="startMenuHolder">
+                    <iframe src="https://discordapp.com/widget?id=1055960596849361006&theme=dark" width="300" height="300" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                  <center>This Arras Private Server totally does not definetly runs on APS++!!!!!!!!!!1!111 Real!!!1!1<br>FR tho, for more info, visit <a href="https://github.com/Taureon/aps-plus-plus">the APS++ GitHub Repository by Taureon</a></center>
+                </div>
+                <div class="startMenuHolder">
+                    <div class="sliderHolder">
+                        <div class="slider" id="startMenuSlidingContent">
+                            <center><img width=92 height=92 src="/logo-game-imp.png" /></center>
+                            <h1 id="gameName"><coolthing>Prague.io</coolthing></h1>
+                            <div id="serverName">
+                                <h4 class="nopadding">Finding Servers...</h4>
+                            </div>
+                            <table id="serverSelector" style="display:none;"></table>
+                            <input type="text" autofocus tabindex="1" spellcheck="false" placeholder="This is the tale of" id="playerNameInput" maxlength="24" />
+                            <input type="text" class="conceal" tabindex="3" placeholder="Insert token here" id="playerKeyInput" maxlength="64" />
+                        </div>
+                        <div class="slider" id="startMenuSlidingTrigger">
+                            <h3 class="nopadding">view options/help 🡲</h3>
+                        </div>
+                        <div class="slider">
+                            <br>
+                            <options_header>Advanced Controls:</options_header><br>
+                            <table>
+                                <tr> <td><b>E</b> - auto-fire</td>     <td><b>C</b> - auto-spin</td> </tr>
+                                <tr> <td><b>R</b> - disable AI</td>    <td><b>N</b> - level up</td> </tr>
+                                <tr> <td><b>V</b> - reverse tank</td>  <td><b>F</b> - auto-alt</td> </tr>
+                                <tr> <td><b>B</b> - reverse mouse</td> <td><b>O</b> - self-destruct</td> </tr>
+                                <tr> <td><b>T</b> - show tank tree</td><td><b>M</b> - maximize stat</td> </tr>
+                                <tr> <td><b>X</b> - spin lock</td>     <td><b>P</b> - developer tank*</td> </tr>
+                                <tfoot> <td><b>*</b> = requires valid token</td> </tfoot>
+                            </table>
+                            <options_header>Options:</options_header>
+                            <select id="optColors" tabindex="-1">
+                                <option value="prong">Prong</option>
+                                <option value="normal">Light Colors</option>
+                                <option value="dark">Dark Colors</option>
+                                <option value="natural">Natural</option>
+                                <option value="classic">Classic</option>
+                                <option value="forest">Forest (Fan-made)</option>
+                                <option value="midnight">Midnight (Fan-made)</option>
+                                <option value="pastel">Snow (Fan-made)</option>
+                                <option value="ocean">Coral Reef (Fan-made)</option>
+                                <option value="badlands">Badlands (Fan-made)</option>
+                                <option value="bleach">Bleach (Fan-made)</option>
+                            </select>
+                            <select id="optBorders" tabindex="-1">
+                                <option value="normal">Soft Borders</option>
+                                <option value="dark">Dark Borders</option>
+                                <option value="neon">Neon Mode</option>
+                                <option value="glass">Glass Mode</option>
+                            </select>
+                            <table>
+                                <tr>
+                                    <td><div><label><input id="optScreenshotMode"   tabindex="-1" class="checkbox" type="checkbox"> Screenshot Mode</label></div></td>
+                                    <td><div><label><input id="optNoPointy"         tabindex="-1" class="checkbox" type="checkbox"> Classic Traps</label></div></td>
+                                </tr>
+                                <tr>
+                                    <td><div><label><input id="optFancy"            tabindex="-1" class="checkbox" type="checkbox"> Low Graphics</label></div></td>
+                                    <td><div><label><input id="optPredictive"       tabindex="-1" class="checkbox" type="checkbox"> Disable Hyperactivity</label></div></td>
+                                </tr>
+                                <tr>
+                                    <td><div><label><input id="coloredHealthbars"   tabindex="-1" class="checkbox" type="checkbox"> Colored Health Bars</label></div></td>
+                                    <td><div><label><input id="seperatedHealthbars" tabindex="-1" class="checkbox" type="checkbox"> Seperated Health Bars</label></div></td>
+                                </tr>
+                                <tr>
+                                    <td><div><label><input id="autoLevelUp"         tabindex="-1" class="checkbox" type="checkbox"> Auto-Level Up</label></div></td>
+                                    <td><div><label><input id="centerTank"          tabindex="-1" class="checkbox" type="checkbox"> Center Camera</label></div></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div style="position: relative; bottom: -10px;">
+                        <button id="startButton" tabindex="2">Play</button>
+                    </div>
+                </div>
+                <div class="startMenuHolder shrinkable">
+                    <span class="titleSpan">Changelog</span>
+                    <div id="patchNotes" class="shadowScroll"></div>
+                    <div id="bottomHolder">
+                        <!--<a class="link youtube"   href="https://www.youtube.com/arrasio">Arras.io YouTube</a>
+                        <a class="link reddit"    href="https://reddit.com/r/arrasio">Arras.io Subreddit</a>
+                        <a class="link original"  href="https://arras.io/">Arras.io Game</a>-->
+                        <a class="link discord"   href="https://discord.gg/kvCAZfUCjy">APS++ Discord</a>
+                        <a class="link developer" href="https://github.com/Taureon/">APS++ Developer</a>
+                        <a class="link github"    href="https://github.com/Taureon/aps-plus-plus">Template Source</a>
+                        <a class="link discord"   href="https://discord.gg/ztjBqKeSF3">HSS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JS -->
+    <script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script type="module" src="./lib/config.js"></script>
+    <script type="module" src="./lib/color.js"></script>
+    <script type="module" src="./lib/global.js"></script>
+    <script type="module" src="./lib/util.js"></script>
+    <script type="module" src="./lib/canvas.js"></script>
+    <script type="module" src="./lib/protocol.js"></script>
+    <script type="module" src="./lib/socketInit.js"></script>
+    <script type="module" src="./app.js"></script>
+    <script>
+        var clicked = false;
+        $("#startMenuSlidingTrigger").on('click', function() {
+            clicked = !clicked;
+            if (clicked) {
+                $(this).html('<h3 class="nopadding">close options/help 🡶</h3>');
+                $(".slider").css({ "top": "-265px" })
+            } else {
+                $(this).html('<h3 class="nopadding">view options/help 🡲</h3>');
+                $(".slider").css({ "top": 0 });
+            }
+        });
+        if (navigator.serviceWorker) navigator.serviceWorker.register('/service-worker.js', { scope: '/' }).then(registration => console.log('Service Worker Registered'));
+    </script>
+</body>
+
+</html>

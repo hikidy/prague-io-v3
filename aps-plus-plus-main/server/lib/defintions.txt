@@ -1,0 +1,10 @@
+Pretty much everything in definitions.js has been migrated to `server/modules/definitions`.
+
+group guide (by taureon):
+bosses   : anything related to bosses
+dev      : developer tanks, beta tester tanks, admin/mod tanks
+food     : anything polygon related
+generics : genericTank, genericEntity, food, bullet, drone, trap
+misc     : anything else, like arena closers, walls, bots, buttons, rocks, etc.
+tanks    : normally playable tanks you can achieve just by being a high enough level
+these groups also include turrets/projectiles that only they use
